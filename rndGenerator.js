@@ -16,6 +16,16 @@ var pick4 = () => {
 	return result;
 }
 
+// This function is going to see if numbers are not repeating in the array
+// var nonRepeating = () => pick4().filter((v, i, o) => i === o.indexOf(i))
+
+var repeatAgain = () => {
+	let otherArray = pick4();
+	for(var i = 0; i < otherArray.length; i++) {
+		if (otherArray.indexOf(i) === -1) return otherArray;
+		else repeatAgain();
+	}
+}
 
 // This function only for testing on rnd numbers
 
