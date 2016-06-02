@@ -9,7 +9,6 @@ var pick4 = () => {
 	var holder = 0;
 	for(var i = 0; i < 4; i++) {
 		result.push(Math.floor(Math.random() * (75) + 1))
-		// if(tempHolder <= 75) result.push(tempHolder);
 	}
 	return result;
 }
@@ -21,3 +20,11 @@ var pick1 = () => {
 	return result;
 }
 
+// This function only for testing on rnd numbers
+
+for(var i = 0; i< 1000; i++) {
+	console.log(pick4())
+}
+
+// TODO: Make sure the numbers in pick4 function are unique.
+// As in you can't have [1,2,3,1] ie 1 is appearing twice.  
