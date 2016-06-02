@@ -1,0 +1,22 @@
+{
+  "name": "lotteryrnd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rndGenerator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nav31/curly-waddle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nav31/curly-waddle/issues"
+  },
+  "homepage": "https://github.com/Nav31/curly-waddle#readme",
+  "dependencies": {
+    "lodash": "^4.13.1"
+  }
+}
