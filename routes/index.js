@@ -2,13 +2,10 @@
 
 const express = require('express');
 const router = express.Router();
-const mega = require('../rndGenerator.js');
+const mega = require('../lotteryRNG/megamillionsRng.js');
+const power = require('../lotteryRNG/powerballRng.js');
 
-router.get('/megamillions', (req, res, next) => {
-	console.log('in the route');
-	var toSend = mega();
-	console.log(toSend);
-	res.json(toSend);
-})
+router.get('/megamillions', (req, res, next) => res.json(mega()))
+router.get('/powerball', (req, res, next) => res.json(power()))
 
 module.exports = router;

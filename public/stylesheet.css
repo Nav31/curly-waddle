@@ -1,0 +1,15 @@
+.background {
+	background: url('sky.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.container {
+	display: flex
+}
+
+body {
+	color: rgb(255,255,255);
+}
