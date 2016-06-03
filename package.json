@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Nav31/curly-waddle#readme",
   "dependencies": {
-    "lodash": "^4.13.1"
+    "angular": "^1.5.6",
+    "bootstrap": "^4.0.0-alpha.2",
+    "express": "^4.13.4",
+    "lodash": "^4.13.1",
+    "morgan": "^1.7.0"
   }
 }
