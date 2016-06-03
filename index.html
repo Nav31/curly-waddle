@@ -6,17 +6,21 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link href='stylesheet.css' rel="stylesheet">
-		<script href="/angular/angular.js"></script>
-		<script href="/module.js"></script>
+		<script src="/angular/angular.js"></script>
+		<script src="/module.js"></script>
+		<script src="/megamillions.controller.js" defer></script>
+		<script src="/lottery.factory.js" defer></script>
 		<!-- Might wanna add more shit here -->
 	</head>
-	<body>
-		<div class='container-fluid'>
+	<body ng-app="lotteryRng">
+		<div class='container-fluid' ng-app="lotteryRng" ng-controller="megamillionsCtrl">
 			<h1>HELLO W0rLd</h1>
 			<h6>About</h6>
 			<p>Please click on a Lottery Game Button to select the game you would like to play</p>
 			<div>
 				<button ng-click='getMegaMillions()' type='button' class='btn btn-primary-outline btn-lg'>MegaMillions</button>
+				<h1>Your Numbers ARE:</h1>
+				<h2>{{numbers}}</h2>
 			</div>
 		</div>
 	</body>

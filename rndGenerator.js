@@ -15,19 +15,17 @@ var pick1 = () => rando(15)
 // This is to pick 4 numbers
 var pick5 = () => {
 	var result = [];
-	for(var i = 0; i < 5; i++) {result.push(rando(75))}
+	while(result.length < 5) {
+		var randNum = rando(75);
+		if(result.indexOf(randNum) < 0){
+			result.push(randNum);
+		}
+	}
 	return result;
 }
 
-// This function is going to see if numbers are not repeating in the array
-var repeatCheck = () => {
-	let numArray = pick5();
-	if(_.uniq(numArray).length < 5) repeatCheck();
-	else return numArray;
-}
-
 var combineThings = () => {
-	let first5 = repeatCheck();
+	let first5 = pick5();
 	if(first5 === undefined) console.log('tryAgain');
 	else return first5.sort().concat(pick1())
 }
@@ -35,4 +33,4 @@ var combineThings = () => {
 module.exports = combineThings;
 
 // This function only for testing on rnd numbers only
-for(var i = 0; i< 1000; i++) {console.log(combineThings())}
+// for(var i = 0; i< 1000; i++) {console.log(combineThings())}
