@@ -23,8 +23,8 @@
 					<button ng-click='getPowerball()' type='button' class='btn btn-danger-outline btn-lg'>Powerball</button>
 				</div>
 				<h1>Your Numbers ARE:</h1>
-				<h2>{{numbers}}</h2>
-				<h4>{{powerInfo}}</h4>
+				<h2 ng-repat="for number in nums">{{number}}</h2>
+				<h4>{{info}}</h4>
 			</div>
 		</div>
 	</body>
