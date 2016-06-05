@@ -10,6 +10,7 @@
 		<script src="/module.js"></script>
 		<script src="/megamillions.controller.js" defer></script>
 		<script src="/lottery.factory.js" defer></script>
+		<script src="/powerball.controller.js" defer></script>
 		<!-- Might wanna add more shit here -->
 	</head>
 	<body ng-app="lotteryRng" class='background'>
@@ -22,6 +23,12 @@
 				<h1>Your Numbers ARE:</h1>
 				<h2>{{numbers}}</h2>
 			</div>
+		</div>
+		<div ng-controller="powerballCtrl">
+			<button ng-click='getPowerball()' type='button' class='btn btn-danger-outline btn-lg'>Powerball</button>
+			<h1>Your Numbers ARE:</h1>
+			<h2>{{numbers}}</h2>
+			<h4>{{powerInfo}}</h4>
 		</div>
 	</body>
 </html>
