@@ -15,10 +15,6 @@ var pick5 = () => {
 	return result;
 }
 
-var combineThings = () => {
-	let first5 = pick5();
-	if(first5.length < 5) console.log("error")
-	else return first5.sort().concat(pick1()) 
-}
+var combineThings = () => pick5().sort().concat(pick1());
 
 module.exports = combineThings;
