@@ -2,7 +2,7 @@
 
 var rando = (num) => Math.floor(Math.random() * (num) + 1);
 
-var pick1 = () => rando(26)
+var pick1 = () => "+ ".concat(rando(26));
 
 var pick5 = () => {
 	var result = [];

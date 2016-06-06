@@ -10,7 +10,7 @@ const _ = require('lodash');
 var rando = (num) => Math.floor(Math.random() * (num)+1)
 
 // This is to pick 1 number 
-var pick1 = () => rando(15)
+var pick1 = () => "+ ".concat(rando(15));
 
 // This is to pick 4 numbers
 var pick5 = () => {
