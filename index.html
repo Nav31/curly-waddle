@@ -14,16 +14,19 @@
 	</head>
 	<body ng-app="lotteryRng" class='background'>
 		<div class='container-fluid' ng-controller="lotteryCtrl">
-			<h1>HELLO W0rLd</h1>
-			<h6>About</h6>
+			<h1>Lottery Random Number Generator</h1>
+			<h6>You can't win in you dont play</h6>
 			<p>Please click on a Lottery Game Button to select the game you would like to play</p>
 			<div>
 				<div>
-					<button ng-click='getMegaMillions()' type='button' class='btn btn-danger-outline btn-lg'>MegaMillions</button>
-					<button ng-click='getPowerball()' type='button' class='btn btn-danger-outline btn-lg'>Powerball</button>
+					<button ng-click='getMegaMillions()' type='button' class='btn btn-success-outline btn-lg'>MegaMillions</button>
+					<button ng-click='getPowerball()' type='button' class='btn btn-success-outline btn-lg'>Powerball</button>
+					<button ng-click='getPlay3()' type='button' class='btn btn-success-outline btn-lg'>Play 3</button>
+					<button ng-click='getPlay4()' type='button' class='btn btn-success-outline btn-lg'>Play 4</button>
+					<button ng-click='getLucky4Life()' type='button' class='btn btn-success-outline btn-lg'> Lucky 4 Life</button>
 				</div>
-				<h1>Your Numbers ARE:</h1>
-				<h2 ng-repeat="number in nums">{{number}}</h2>
+				<h1 ng-hide='hidden'>Your Numbers ARE:</h1>
+				<h2 ng-repeat="number in nums track by $index">{{number}}</h2>
 				<h4>{{info}}</h4>
 			</div>
 		</div>
