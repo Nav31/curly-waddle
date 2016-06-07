@@ -11,6 +11,7 @@ router.get('/megamillions', (req, res, next) => res.json(mega()))
 router.get('/powerball', (req, res, next) => res.json(power()))
 router.get('/powerballInfo', (req, res, next) => res.json(lotteryInfo.powerballOdds))
 router.get('/megamillonsInfo', (req, res, next) => res.json(lotteryInfo.megamillionsOdds))
-router.get('/play3', (req, res, next) => res.json(dailyNums.pick3()));
+router.get('/play3', (req, res, next) => res.json(dailyNums.pick3()))
+router.get('/play4', (req, res, next) => res.json(dailyNums.pick4()))
 
 module.exports = router;
