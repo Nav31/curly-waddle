@@ -26,8 +26,8 @@
 					<button ng-click='getLucky4Life()' type='button' class='btn btn-success-outline btn-lg'> Lucky 4 Life</button>
 				</div>
 				<h1 ng-hide='hidden'>Your Numbers Are:</h1>
-				<h2 ng-repeat="number in nums track by $index">{{number}}</h2>
-				<h4>{{info}}</h4>
+				<h2 ng-repeat="number in nums track by $index" id='numbers'>{{number}}</h2>
+				<h3 id='info'>{{info}}</h3>
 			</div>
 		</div>
 	</body>

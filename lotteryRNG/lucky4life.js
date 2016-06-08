@@ -2,12 +2,12 @@
 
 var rando = (num) => Math.floor(Math.random() * (num) + 1);
 
-var pick1 = () => "+ ".concat(rando(26));
+var pick1 = () => "+ ".concat(rando(18));
 
 var pick5 = () => {
 	var result = [];
 	while(result.length < 5) {
-		let randNum = rando(69);
+		let randNum = rando(48);
 		if(result.indexOf(randNum) < 0) result.push(randNum);
 	}
 	return result;

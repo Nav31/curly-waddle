@@ -1,7 +1,7 @@
 'use strict'
 
 app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
-	let getInfo = info => $scope.info = info;
+	let getInfo = info => $scope.info = info.odds;
 	let getNums = numbers => $scope.nums = numbers;
 	$scope.hidden = true;
 
@@ -19,16 +19,19 @@ app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
 	}
 	$scope.getPlay3 = () => {
 		$scope.hidden = false;
-		LotteryFactory.getPlay3().then(getNums).catch($log);
+		LotteryFactory.getPlay3().then(getNums)
+		LotteryFactory.getPlay3Info().then(getInfo).catch($log);
 	}
 	$scope.getPlay4 = () => {
 		$scope.hidden = false;
-		LotteryFactory.getPlay4().then(getNums).catch($log)
+		LotteryFactory.getPlay4().then(getNums)
+		LotteryFactory.getPlay4Info().then(getInfo).catch($log);
 	}
 
 	$scope.getLucky4Life = () => {
 		$scope.hidden = false;
-		
+		LotteryFactory.getLucky4Life().then(getNums).catch($log);
+		$scope.info = LotteryFactory.getLucky4LifeInfo().then(getInfo).catch($log);
 	}
 });
 

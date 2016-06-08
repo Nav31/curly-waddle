@@ -12,4 +12,19 @@
 
 body {
 	color: rgb(255,255,255);
+	font-family: monospace;
+	font-weight: 600;
+	text-align: center
+}
+
+#info, #numbers{
+	color: #F44336;
+	font-weight: 400;
+}
+
+@media only screen and (max-width: 900px) {
+	#info, #numbers{
+		color: #263238;
+		font-weight: 400;
+	}
 }
