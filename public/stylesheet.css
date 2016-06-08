@@ -17,13 +17,13 @@ body {
 	text-align: center
 }
 
-#info, #numbers{
+#info, #numbers #footer{
 	color: #F44336;
 	font-weight: 400;
 }
 
 @media only screen and (max-width: 900px) {
-	#info, #numbers{
+	#info, #numbers, #footer{
 		color: #263238;
 		font-weight: 400;
 	}
