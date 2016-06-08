@@ -7,7 +7,7 @@ require('./configure')(app);
 const path = require('path');
 const routes = require('./routes');
 
-const port = 1337;
+const port = process.env.PORT || 1337;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
