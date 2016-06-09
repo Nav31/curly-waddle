@@ -27,7 +27,7 @@
 				<h1 ng-hide='hidden'>Your Numbers Are:</h1>
 				<h2 ng-repeat="number in nums track by $index" id='numbers'>{{number}}</h2>
 				<h3 id='info'>{{info}}</h3>
-				<h4 id='info'> The current jackpot is: {{value}}</h4>
+				<h4 ng-hide='hidden' id='info'> The current jackpot is: {{value}}</h4>
 			</div>
 		</div>
 	</body>
