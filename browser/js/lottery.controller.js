@@ -2,12 +2,12 @@
 
 app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
 
-	let getInfo = info => $scope.info = info.odds;
-	let getNums = numbers => $scope.nums = numbers;
-	let megaVal = jackpots => $scope.value = jackpots[0].concat(" ", jackpots[1]);
-	let powerVal = jackpots => $scope.value = jackpots[2].concat(" ", jackpots[3]);
-	let megaPrevNums = numbers => $scope.winningNums = numbers[0];
-	let powerPrevNums = numbers => $scope.winningNums = numbers[1];
+	const getInfo = info => $scope.info = info.odds;
+	const getNums = numbers => $scope.nums = numbers;
+	const megaVal = jackpots => $scope.value = jackpots[0].concat(" ", jackpots[1]);
+	const powerVal = jackpots => $scope.value = jackpots[2].concat(" ", jackpots[3]);
+	const megaPrevNums = numbers => $scope.winningNums = numbers[0];
+	const powerPrevNums = numbers => $scope.winningNums = numbers[1];
 
 	$scope.hidden = true;
 

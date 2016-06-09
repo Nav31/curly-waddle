@@ -4,8 +4,8 @@
 	<head>
 		<title>Lottery Random Number Generator</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-		<link href='/css/stylesheet.css' rel="stylesheet">
 		<script src="/angular/angular.js"></script>
+		<link href='/css/stylesheet.css' rel="stylesheet">
 		<script src="/js/module.js"></script>
 		<script src="/js/lottery.controller.js" defer></script>
 		<script src="/js/lottery.factory.js" defer></script>
@@ -27,8 +27,8 @@
 				<h1 ng-hide='hidden'>Your Numbers Are:</h1>
 				<h2 ng-repeat="number in nums track by $index" id='numbers'>{{number}}</h2>
 				<h3 id='info'>{{info}}</h3>
-				<h4 ng-hide='hidden' id='info'> The current jackpot is: {{value}}</h4>
-				<h4 ng-hide='hidden' id='info'> The Previous Winning Numbers Are: {{winningNums}}</h4>
+				<h4 ng-cloak ng-hide='hidden' class="ng-cloak" id='info' ng-cloak> The current jackpot is: {{value}}</h4>
+				<h4 ng-hide='hidden' class="ng-cloak" id='info' ng-cloak> The Previous Winning Numbers Are: {{winningNums}}</h4>
 			</div>
 		</div>
 	</body>
