@@ -7,7 +7,6 @@ const router = express.Router();
 const url = "https://www.usamega.com/"
 
 router.use((req, response, next) => {
-	console.log('hey');
 	request(url, (err, res, body) => {
 		if(!err) {
 			let $ = cheerio.load(body)
