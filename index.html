@@ -4,7 +4,6 @@
 	<head>
 		<title>Lottery Random Number Generator</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link href='/css/stylesheet.css' rel="stylesheet">
 		<script src="/angular/angular.js"></script>
 		<script src="/js/module.js"></script>
@@ -28,6 +27,7 @@
 				<h1 ng-hide='hidden'>Your Numbers Are:</h1>
 				<h2 ng-repeat="number in nums track by $index" id='numbers'>{{number}}</h2>
 				<h3 id='info'>{{info}}</h3>
+				<h4 id='info'>{{value}}</h4>
 			</div>
 		</div>
 	</body>

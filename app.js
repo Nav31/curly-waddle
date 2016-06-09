@@ -15,6 +15,8 @@ app.use(express.static(path.join(__dirname, 'browser')));
 
 app.use('/api', routes);
 
-app.get('/*', (req, res, next) => res.sendFile(app.get('indexHTMLPath')));
+// Might want to add a * after app.get('/') => app.get('/*')
+// If something breaks that was working prev.
+app.get('/', (req, res, next) => res.sendFile(app.get('indexHTMLPath')));
 server.listen(port, () => console.log('Creeping on Port: ', port));
 

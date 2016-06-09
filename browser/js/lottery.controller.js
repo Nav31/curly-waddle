@@ -3,12 +3,14 @@
 app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
 	let getInfo = info => $scope.info = info.odds;
 	let getNums = numbers => $scope.nums = numbers;
+	let getJackpots = jackpots => $scope.value = jackpots
 	$scope.hidden = true;
 
 	$scope.getMegaMillions = () => {
 		$scope.hidden = false;
 		LotteryFactory.getMegaMillions().then(getNums)
 		$scope.info = LotteryFactory.getMegaMillionsInfo().then(getInfo)
+		$scope.value = LotteryFactory.getJackpots().then(getJackpots) //$scope.value = jackpots[0]
 		.catch($log);
 	}
 	$scope.getPowerball = () => {
