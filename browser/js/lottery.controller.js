@@ -1,10 +1,13 @@
 'use strict'
 
 app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
+
 	let getInfo = info => $scope.info = info.odds;
 	let getNums = numbers => $scope.nums = numbers;
 	let megaVal = jackpots => $scope.value = jackpots[0].concat(" ", jackpots[1]);
-	let powerVal = jackpots => $scope.value = jackpots[2].concat(" ",jackpots[3])
+	let powerVal = jackpots => $scope.value = jackpots[2].concat(" ", jackpots[3]);
+	let megaPrevNums = numbers => $scope.winningNums = numbers[0];
+	let powerPrevNums = numbers => $scope.winningNums = numbers[1];
 
 	$scope.hidden = true;
 
@@ -12,7 +15,8 @@ app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
 		$scope.hidden = false;
 		LotteryFactory.getMegaMillions().then(getNums)
 		$scope.info = LotteryFactory.getMegaMillionsInfo().then(getInfo)
-		$scope.value = LotteryFactory.getJackpots().then(megaVal) 
+		$scope.value = LotteryFactory.getJackpots().then(megaVal)
+		$scope.winningNums = LotteryFactory.getPrevNums().then(megaPrevNums) 
 		.catch($log);
 	}
 	$scope.getPowerball = () => {
@@ -20,6 +24,7 @@ app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
 		LotteryFactory.getPowerBall().then(getNums)
 		$scope.info = LotteryFactory.getPowerBallInfo().then(getInfo)
 		$scope.value = LotteryFactory.getJackpots().then(powerVal)
+		$scope.winningNums = LotteryFactory.getPrevNums().then(powerPrevNums)
 		.catch($log);
 	}
 	$scope.getPlay3 = () => {
