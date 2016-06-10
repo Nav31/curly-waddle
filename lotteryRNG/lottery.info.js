@@ -14,7 +14,7 @@ const lucky4Life = {
 }
 
 const powerball = {
-	odds: 'Your chance of winning the Grand Prize is 1: 292,201,338.00 \n The cost of a ticket (a single game) is $2.00',
+	odds: 'Your chance of winning the Grand Prize is 1 in 292,201,338.00 \n The cost of a ticket (a single game) is $2.00',
 }
 
 const play3 = {
