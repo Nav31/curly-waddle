@@ -19,7 +19,8 @@ app.factory('LotteryFactory', ($http) => {
 		getLucky4LifeInfo: () => $http.get('api/lucky4lifeInfo').then(parseData),
 
 		getJackpots: () => $http.get('api/getJackpotVals').then(parseData),
-		getPrevNums: () => $http.get('api/getPreviousWinningNumbers').then(parseData)
+		getPrevNums: () => $http.get('api/getPreviousWinningNumbers').then(parseData),
+		getLuckyPrev: () => $http.get('api/getLuckyNums').then(parseData)
 	};
 });
 

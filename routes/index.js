@@ -9,6 +9,7 @@ const dailyNums = require('../lotteryRNG/play3and4.js');
 const lucky4life = require('../lotteryRNG/lucky4life.js');
 const prizeVals = require('../lotteryRNG/scraping.js');
 const prevNums = require('../lotteryRNG/scrapedNums.js');
+const luckyNums = require('../lotteryRNG/scrapedLucky.js');
 
 router.get('/megamillions', (req, res, next) => res.json(mega()));
 router.get('/megamillonsInfo', (req, res, next) => res.json(lotteryInfo.megaMillions));
@@ -27,5 +28,6 @@ router.get('/play4Info', (req, res, next) => res.json(lotteryInfo.play4));
 
 router.get('/getJackpotVals', prizeVals);
 router.get('/getPreviousWinningNumbers', prevNums);
+router.get('/getLuckyNums', luckyNums);
 
 module.exports = router;

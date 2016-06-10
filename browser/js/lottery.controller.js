@@ -8,6 +8,7 @@ app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
 	const powerVal = jackpots => $scope.value = jackpots[2].concat(" ", jackpots[3]);
 	const megaPrevNums = numbers => $scope.winningNums = numbers[0];
 	const powerPrevNums = numbers => $scope.winningNums = numbers[1];
+	const luckyPrevNums = numbers => $scope.winningNums = numbers;
 
 	$scope.hidden = true;
 
@@ -41,7 +42,8 @@ app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
 	$scope.getLucky4Life = () => {
 		$scope.hidden = false;
 		LotteryFactory.getLucky4Life().then(getNums).catch($log);
-		$scope.info = LotteryFactory.getLucky4LifeInfo().then(getInfo).catch($log);
+		$scope.info = LotteryFactory.getLucky4LifeInfo().then(getInfo);
+		$scope.winningNums = LotteryFactory.getLuckyPrev().then(luckyPrevNums).catch($log)
 	}
 });
 
