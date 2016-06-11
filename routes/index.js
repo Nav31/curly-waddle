@@ -4,8 +4,8 @@ const express = require('express');
 const router = express.Router();
 const lotteryInfo = require('../lotteryRNG/lottery.info.js');
 const dailyNums = require('../lotteryRNG/play3and4.js');
-const prizeVals = require('../lotteryRNG/scraping.js');
-const prevNums = require('../lotteryRNG/scrapedNums.js');
+const prizeVals = require('../lotteryRNG/scrapedPrizeValues.js');
+const prevNums = require('../lotteryRNG/scrapedWinningNums.js');
 const luckyNums = require('../lotteryRNG/scrapedLucky.js');
 const games = require('../lotteryRNG/games.js');
 
