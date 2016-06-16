@@ -1,4 +1,4 @@
-# [Lottery Random Number Generator](lotteryrng.com)
+# [Lottery Random Number Generator]: www.lotteryrng.com
 
 A random number generator for lottery numbers.
 Also uses [`cheerio`](https://github.com/cheeriojs/cheerio) for scraping
