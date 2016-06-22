@@ -13,7 +13,7 @@ var pick5 = (gameLimit) => {
 	return result;
 }
 
-var combineThings = (funcA, funcB) => funcA.sort().concat(funcB);
+var combineThings = (funcA, funcB) => funcA.sort((a,b) => a - b).concat(funcB);
 
 var megaMillions = () => combineThings(pick5(75), pick1(15));
 var powerball = () => combineThings(pick5(69), pick1(26));
