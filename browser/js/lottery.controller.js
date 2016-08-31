@@ -29,18 +29,18 @@ app.controller('lotteryCtrl', ($scope, LotteryFactory, $log) => {
 		.catch($log);
 	}
 	$scope.getPlay3 = () => {
-		$scope.hidden = false;
+		$scope.hidden = true;
 		LotteryFactory.getPlay3().then(getNums)
 		LotteryFactory.getPlay3Info().then(getInfo).catch($log);
 	}
 	$scope.getPlay4 = () => {
-		$scope.hidden = false;
+		$scope.hidden = true;
 		LotteryFactory.getPlay4().then(getNums)
 		LotteryFactory.getPlay4Info().then(getInfo).catch($log);
 	}
 
 	$scope.getLucky4Life = () => {
-		$scope.hidden = false;
+		$scope.hidden = true;
 		LotteryFactory.getLucky4Life().then(getNums).catch($log);
 		$scope.info = LotteryFactory.getLucky4LifeInfo().then(getInfo);
 		$scope.winningNums = LotteryFactory.getLuckyPrev().then(luckyPrevNums).catch($log)
